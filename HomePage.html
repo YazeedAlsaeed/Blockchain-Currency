@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Wallet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadPage()">
+  <div class="container">
+    <h1>Blockchain Wallet</h1>      
+      <div class="grid">
+        <div class="grid">
+          <h2>Node:</h2>
+          <h2 id="nodeNumber"></h2>
+        </div>
+        <div class="grid">
+          <h2>Balance:</h2>
+          <h2 id="balanceDisplay"></h2>
+        </div>
+      </div>    
+    <div class="transaction">
+      <h2>Make Transaction</h2>
+      <form action="/transactions/new" method="POST" id="transaction-form">
+        <label for="recipient">Recipient Address:</label>
+        <input type="text" name="recipient" id="recipient-address" required placeholder="Enter Address";>
+        <label for="amount">Amount:</label>
+        <input type="number" name="amount" id="transaction-amount" required placeholder="Enter Amount">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="grid"> 
+    <div class="mining">
+      <h2>Mine Block</h2>
+      <button onclick="mineBlock()">Mine</button>
+    </div>
+    <div class="nodes">
+      <h2>Show Block</h2>
+      <button onclick="Block()">Show Block</button>
+    </div>
+    <div class="sync">
+      <h2>Sync</h2>
+      <button onclick="syncBlockchain()">Sync</button>
+    </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+  
